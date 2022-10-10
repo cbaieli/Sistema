@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProvinciaRepositorio extends JpaRepository<ProvinciaEntidad,Long>{
+public interface ProvinciaRepositorio extends JpaRepository<ProvinciaEntidad,String>{
     @Query("SELECT pr FROM ProvinciaEntidad pr WHERE pr.nombre = :nombre")
     public ProvinciaEntidad buscarPorNombre(@Param("nombre") String nombre);
   
